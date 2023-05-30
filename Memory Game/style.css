@@ -1,0 +1,213 @@
+/* Ori Farkash 208985341
+   Chen Amrani 206577645 */
+body {
+  background-color: rgb(197, 201, 212);
+}
+#head-line{
+  color: #555;
+
+}
+#timer {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#num {
+  margin-top: 10px;
+  font-weight: bold;
+}
+#finishbutton {
+  position:absolute;
+  bottom: 450px; /* Adjust this value to provide enough space above the cards */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+
+#num-cards{
+  height: 20px;
+  margin-bottom: 15px;
+}
+
+
+.container {margin-top: 2px;
+color: white;
+  max-width: 800px;
+  height: 250px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5%;
+  justify-content: space-between;
+  font-size: 25px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+
+
+#game-container {
+
+  border-radius: 10px;
+  margin-top: 10%;
+  background-color:rgb(197, 201, 212);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  
+  width: 100px;
+  height: 100px;
+  background-color: #333;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 100px;
+  text-align: center;
+  border-radius: 7px;
+  transition: transform 0.5s ease;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  position: relative;
+}
+
+.card::before {
+  content: "\f128"; /* Font Awesome question mark icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 32px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* Ignore clicks on the question mark */
+  transition: opacity 0.5s ease; /* Add a transition effect for opacity */
+  opacity: 1; /* Initially show the question mark */
+}
+
+.card.flipped::before {
+  opacity: 0; /* Hide the question mark when card is flipped */
+}
+
+.card.flipped{
+  content: "\f128"; /* Font Awesome question mark icon */
+  color: #333;
+ background-color: #333;
+
+}
+
+
+.card .symbol {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  backface-visibility: hidden;
+  transition: transform 0s ease;
+  opacity: 0; /* Initially hide the symbol */
+}
+
+.flipped .symbol {
+  display: block;
+  
+}
+
+.hide {
+  display: none;
+}
+
+#game-stats {
+  margin-top: 20px;
+}
+
+#timer {
+  font-weight: bold;
+}
+
+#game-result {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#play-again {
+  margin-top: 20px;
+  padding: 10px 20px;
+}
+
+.symbol {
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+}
+.card.flipped .symbol {
+  opacity: 1; /* Show the symbol when card is flipped */
+  
+  transform: translate(-50%, -50%) rotateY(-180deg); 
+}
+
+.card.flipped {
+  
+  transform: rotateY(180deg);
+}
+#Start-game{
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.container.game-form{
+  justify-content: space-between;
+}
+#first-row{
+  margin-bottom: 10px;
+}
+#player-name{
+  width: 172px;
+  height: 20px;
+  margin-bottom: 15px;
+}
+#player-name-printed{
+  color: #555;
+
+}
+#number-of-cards{
+  color: #555;
+  
+}
+
+#toggle-sound {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#toggle-sound:hover {
+  background-color: #555;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Game</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+
+</head>
+<body>
+  <audio id="background-audio" src="mixkit-game-level-music-689.wav" loop></audio>
+  <audio id="pair-sound" src="mixkit-winning-a-coin-video-game-2069.wav"></audio>
+  <audio id="endGame-sound" src="mixkit-arcade-video-game-scoring-presentation-274.wav"></audio>
+  <button id="toggle-sound">Mute Sound</button>
+
+  <div class="container">
+    <h1 id="head-line">Memory Game</h1>
+    <div id="player-info"></div>
+    <div id="timer"></div>
+    <div id="num"></div>
+    <div id="finish"></div>
+    <form id="game-form">
+      <div id="first-row">
+      <label for="player-name" id = player-name-printed>Player Name:</label>
+      <input type="text" id="player-name" required>
+      </div>
+      <div id="second-row">
+        <label for="num-cards" id = number-of-cards>Choose Even Number of Cards</label>
+        <input type="number" id="num-cards"  min="2" max="60"   required>
+      </div>
+      <div id="cards-number-display"> </div>
+      <button type="submit" id = "Start-game">Start Game</button>
+    </form>
+    
+    <div id="game-container"></div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
